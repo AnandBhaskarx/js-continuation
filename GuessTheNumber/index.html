@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            align-items: center;
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+        #guess{
+            font-size: 25px;
+        
+            background-color:green;
+            border-radius: 12px;
+            border-color: brown;
+            padding:10px 15px;
+        }
+        #subt{
+            color: white;
+            background-color:orange;
+        }
+        #subt:hover{
+            background-color: bisque;
+            color: red;
+        }
+    </style>
+</head>
+<body style="background-color: black; color:white;">
+      <nav>
+    <a href="/" aria-current="page">Home</a>
+    <a target="_blank" href="www.linkedin.com/in/aanand-bhaskar-a7bb98228">Linked in</a>
+  </nav>
+  <div id="wrapper">
+    <h1>Number guessing Game</h1>
+    <p>Try and guess a number between 1 and 100</p>
+    <p>you have 10 attempts to guess the right Number</p>
+  </br>
+    <form class="form">
+        <label for="guessFeild" id="guess">Guess the Number</label><br>
+        <input type="text" id="guessFeild" class="guessFeild"><br>
+        <input type="submit" id="subt" value="submit guess" class="guessFeild">
+        </form>
+        <div class="resultParas">
+            <p>previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult"></span></p>
+            <p class="lowOrHi"></p>
+        </div>
+  </div >
+    
+</body>
+</html>
