@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Guessing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
+        .navbar{
+            top: 0;
+          
+            align-items: center;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* padding-left: 50px; */
+            padding:10px 20px;
+            display: flex;
+            justify-content: space-evenly;
+            position:fixed;   
+            height: 60px;
+            
+            
+        }
+        .ind{
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 8px 12px;
+        transition: background 0.3s ease;
+}
+
+    .ind:hover {
+    background-color: #e0be44;       /* Hover effect */
+    border-radius: 5px;
+}
+.navbar{
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Drop shadow */
+  backdrop-filter: blur(10px);           /* Glassy effect */
+}
+
         .form{
             align-items: center;
             padding-top: 50px;
@@ -26,14 +60,23 @@
             background-color: bisque;
             color: red;
         }
+
     
     </style>
 </head>
-<body style="background-color: black; color:white;">
-      <nav>
-    <a href="/" aria-current="page">Home</a>
-    <a target="_blank" href="www.linkedin.com/in/aanand-bhaskar-a7bb98228">Linked in</a>
-  </nav>
+<body style="background-color: black; color:white; margin:0; padding-top: 60px;
+  margin: 0;
+  height: 100vh;                     
+  display: flex;
+  justify-content:space-evenly;          
+  /* align-items: center;               */
+  /* text-align: center;                */
+">
+      <nav class="navbar">
+    <a href="/" aria-current="page" class="ind">Home</a>
+<a href="https://www.linkedin.com/in/aanand-bhaskar-a7bb98228" target="_blank" class="ind">
+  <i class="fab fa-linkedin"></i> Linked In
+</a>  </nav>
   <div id="wrapper">
     <h1>Number guessing Game</h1>
     <p>Try and guess a number between 1 and 100</p>
