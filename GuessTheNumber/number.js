@@ -1,4 +1,6 @@
 let randomNumber=Math.round(parseInt(Math.random()*100+1))
+console.log(randomNumber)
+// console.log(Math.random())
 
 const submit = document.querySelector('#subt')
 
@@ -68,7 +70,7 @@ function displayGuess(guess){
     remaining.innerHTML=`${11-numGuess}`
 }
 function displayMessage(message){
-    lowOrHigh.innerHTML=`<h2>${message}</h2>`
+    lowOrHi.innerHTML=`<h2>${message}</h2>`
 }
 
 function newGame(){
@@ -95,9 +97,9 @@ function endGame(){
 
 userInput.value=''
     userInput.setAttribute('disabled','')
-    p.clasList.add('button')
-    p.innerHTML=`<h2 id="newGame">Start new game</h2>`
-    startOver.appendChild(P)
+    p.classList.add('button')
+    p.innerHTML=`<h2>Start new game</h2>`
+    startOver.appendChild(p)
     playGame=false
     newGame()
 }
