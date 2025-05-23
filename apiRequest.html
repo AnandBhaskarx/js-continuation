@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML httprequest</title>
+    <style>
+        .card{
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+            margin: 20px;
+        }
+        .card img{
+            width: 100%;
+            height: auto;
+        }
+
+        .card .Number{
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>readystate methods</h2>
+    <img src="/TNP trail docs/apis/img1.png" alt="imageofreadystate">
+    <div class="card">
+        <div id="image"></div>
+        <div id="Number" class="Number"></div>
+
+        <button id="btn">generate</button>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    const btn = document.querySelector('#btn');
+    const divImage = document.querySelector('#image')
+    const divNumber = document.querySelector('#Number')
+
+
+     const xhr = new XMLHttpRequest() ;
+     xhr.open('GET',requestUrl)
+     xhr.onreadystatechange = function(){
+        //  console.log(xhr.readyState);
+         if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText); //string to json conversion
+            // console.log(data);
+            const follower=(data.followers);
+
+            const image2=(data.avatar_url);
+            
+            btn.addEventListener('click',function(){
+                divImage.innerHTML=`<img src=${image2} alt="avatar">`;
+                divNumber.innerHTML=`${follower}`;
+            })
+          
+         }
+
+     }
+    
+     
+      xhr.send()
+
+</script>
+
+<script src="promises.js"></script>
+</html>
